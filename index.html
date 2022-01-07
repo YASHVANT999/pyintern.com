@@ -1,0 +1,192 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-eqviv="X-UA-Compatable" content="IE=edge">
+        <http name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>pyithern.com</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<nav class="navbar">
+    <ul class="link-group">
+        <li class="link active"><a href="#home">home</a></li>
+        <li class="link"><a href="#courses">courses</a></li>
+        <li class="link"><a href="#skills">skills</a></li>
+        <div class="dropdown"><li class="link"><a>notes</a></li><div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+          </div>
+        </div>
+        <li class="link"><a href="#contacts">contacts</a></li></div>
+    </ul>
+<!--singup button-->
+    <button class="sign" onclick="openForm()">signup/login</button>
+    <!--login form-->
+    <div class="form-popup" id="myForm">
+        <form action="index.html" class="form-container">
+          <h1>Login</h1>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <center><p style="margin-bottom: 5px;">Forgot your password?</p></center>
+      
+          <button type="submit" class="btn">Login</button>
+          <button type="submit" class="btn" onclick="signup()">Signup</button>
+          <button type="button" class="btn cancel" onclick="loginclose()">Close</button>
+        </form>
+      </div>
+      <!--signp form-->
+      <div class="form-popup" id="signupForm">
+        <form class="form-container" style="height: 450px;">
+            <h1>Sign Up</h1>
+            <label for="name"><b>User</b></label>
+            <input type="text" placeholder="Enter Username" name="name" required>
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+        
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <button type="submit" class="btn">Signup</button>
+          <button type="button" class="btn cancel" onclick="signupclose()">Close</button>
+        </form></div>
+</nav>
+<!--home page-->
+<section id=home class="home-section home_container active">
+    <div class="home_left">
+        <h2>Introducing</h2>
+        <h1>Pyintern Courses</h1>
+        <h3>Mohd. Amir</h3>
+        <h4>Experinces</h4>
+        <div class="home_experinces">
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">HTML</div>
+            </div>
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">Web Development</div>
+            </div>
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">Python</div>
+            </div>
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">Java</div>
+            </div>
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">Machine Learning</div>
+            </div>
+            <div class="one_exp">
+                <div class="color_one"></div>
+                <div class="exp">C/C++</div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="home_right">
+        <img src="img/1632026968831.jpg" alt="Mohd. Amir">
+    </div>
+</section>
+<!--project page-->
+<section id="courses" class="project-section active">
+    <h1 class="project-heading"> courses we offer</h1>
+    <div class="project-container">
+        <div class="project-card" data-aos="slide-right">
+            <image src="img/course01.jpg" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">course 01</h1>
+                <p class="project-info">
+                    C language<br><b>Rs.1350</b>
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn get"><a href="https://forms.gle/Ydab5vaErf8nJNrQ7" style="text-decoration: none; color:#fff;">enroll</a></button>
+                    <button class="project-btn live">syllabus</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card" data-aos="slide-left">
+            <image src="img/course02.jpg" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">course 02</h1>
+                <p class="project-info">
+                    Python language<br><b>Rs.1350</b>
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn get">enroll</button></button>
+                    <button class="project-btn live">syllabus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--other skills-->
+<div id="skills" class="skill-section">
+    <h1 class="heading">other skills</h1>
+    <div class="skill-container">
+        <div class="skill-card" data-aos="flip-left">
+            <img src="img/html.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">HTML</h1>
+            <p class="skill-info">skeleton of web page</p>
+        </div>
+        <div class="skill-card" data-aos="flip-left">
+            <img src="img/css.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">CSS</h1>
+            <p class="skill-info">style of web page</p>
+        </div>
+        <div class="skill-card" data-aos="flip-left">
+            <img src="img/js.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">JAVASCRIPT</h1>
+            <p class="skill-info">soul of web page</p>
+        </div>
+        <div class="skill-card" data-aos="flip-left">
+            <img src="img/nodejs.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">NODE.JS</h1>
+            <p class="skill-info">open source server environment</p>
+        </div>
+        <div class="skill-card" data-aos="flip-left">
+            <img src="img/reactjs.png" class="skill-img" alt="">
+            <div class="skill-level">98%</div>
+            <h1 class="skill-name">REACT.JS</h1>
+            <p class="skill-info">painless to create interactive UIs</p>
+        </div>
+    </div>
+</div>
+<!--contact sec-->
+<p class="heading1" id="contacts">contact us</p>
+<section class="contact-section" data-aos="flip-right">
+    <form class="contact-form">
+        <center><input type="text" name="name" id="name" autocomplete="off" placeholder="name" size="39" style="border-radius: 3px;opacity: 0.9;" class="name"><br>
+        <div><input type="text" name="email" id="email" autocomplete="off" placeholder="email" size="39" style="border-radius: 3px;opacity: 0.9;border: solid lightcoral;height: 30px; margin-top: 8px;"></div><br>
+        <textarea name="msg" id="msg" placeholder="  type your message here" autocomplete="off" style="opacity: 0.9;"></textarea>
+        <button type="submit" class="form-submit-btn">contact</button></center>
+    </form>
+    <h3 class="about-section">About Us</h3><br>
+    <p class="about-info">Pyintern was founded in 2021 with a mision to create skilled Software Engineer for our country and world. At Pyintern, we strive to increase student intrest by providing hands on practical training in every concept taught in the classroom.<br><br>Founder : Mohd Amir<br>Mail : amir@gmail.com<br>Phone : 8090888647<br>Developer & Designer : Yashwant Gupta<br>Mail : mlp.yashvantgupta@gmail.com</p></div>
+    
+</section>
+<script src="app.js"></script>
+<!--aos script-->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    offset: 160,
+    duration: 700
+  });
+</script>
+
+</body>
+</html>
