@@ -7,6 +7,7 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -25,38 +26,48 @@
         <li class="link"><a href="#contacts">contacts</a></li></div>
     </ul>
 <!--singup button-->
-    <button class="sign" onclick="openForm()">signup/login</button>
-    <!--login form-->
-    <div class="form-popup" id="myForm">
-        <form action="index.html" class="form-container">
-          <h1>Login</h1>
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <center><p style="margin-bottom: 5px;">Forgot your password?</p></center>
-      
-          <button type="submit" class="btn">Login</button>
-          <button type="submit" class="btn" onclick="signup()">Signup</button>
-          <button type="button" class="btn cancel" onclick="loginclose()">Close</button>
-        </form>
-      </div>
-      <!--signp form-->
-      <div class="form-popup" id="signupForm">
-        <form class="form-container" style="height: 450px;">
-            <h1>Sign Up</h1>
-            <label for="name"><b>User</b></label>
-            <input type="text" placeholder="Enter Username" name="name" required>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
-        
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            <button type="submit" class="btn">Signup</button>
-          <button type="button" class="btn cancel" onclick="signupclose()">Close</button>
-        </form></div>
+    <button class="sign" onclick="login_page()">signup/login</button>
 </nav>
+<!-- login/signupform -->
+<div class="login hide" id="login">
+    <button class="close-modal">&times;</button>
+    <div class="form-modal">
+        <div class="form-toggle">
+          <button id="login-toggle" onclick="toggleLogin()">log in</button>
+          <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
+        </div>
+  
+        <div id="login-form">
+          <form>
+            <input type="email" name="email" placeholder="Enter email" required/>
+            <input type="password" placeholder="Enter password" required />
+            <input type="text" style="width: 42%;" id="capt" readonly>
+            <input type="text" style="width: 42%;" placeholder="Enter captcha" id="textinput" required>
+            <img src="img/capimg1.png" style="height: 2%; width: 10%;" onclick="cap()">
+            <button type="button" class="btn login" style="margin-top:2rem" onclick="validcap()">login</button>
+            <p><a href="javascript:void(0)">Forgotten account</a></p>
+            <hr />
+          </form>
+        </div>
+  
+        <div id="signup-form">
+          <form>
+            <input type="text" name="name" placeholder="Choose username" required/>
+            <input type="email" name="name" placeholder="Enter your email" required/>
+            <input type="password" placeholder="Create password" required/>
+            <input type="text" style="width: 42%;" id="signup_capt" readonly>
+            <input type="text" style="width: 42%;" placeholder="Enter captcha" required>
+            <img src="img/capimg1.png" style="height: 2%; width: 10%;" onclick="cap()">
+            <button type="button" class="btn signup">create account</button>
+            <p>
+              Clicking <strong>create account</strong> means that you are agree to
+              our <a href="javascript:void(0)">terms of services</a>.
+            </p>
+            <hr />
+          </form>
+        </div>
+      </div>
+</div>
 <!--home page-->
 <section id=home class="home-section home_container active">
     <div class="home_left">
@@ -178,6 +189,9 @@
     <p class="about-info">Pyintern was founded in 2021 with a mision to create skilled Software Engineer for our country and world. At Pyintern, we strive to increase student intrest by providing hands on practical training in every concept taught in the classroom.<br><br>Founder : Mohd Amir<br>Mail : amir@gmail.com<br>Phone : 8090888647<br>Developer & Designer : Yashwant Gupta<br>Mail : mlp.yashvantgupta@gmail.com</p></div>
     
 </section>
+
+
+
 <script src="app.js"></script>
 <!--aos script-->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
