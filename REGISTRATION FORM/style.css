@@ -1,0 +1,396 @@
+* {
+  margin: 0;
+  top: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+  width: 100%;
+  margin: auto;
+}
+.heading img {
+  height: 150px;
+  width: 300px;
+  margin-bottom: -80px;
+  margin-left: -25px;
+}
+
+.head {
+  align-items: center;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: black;
+}
+
+.details p {
+  border: none;
+  text-transform: capitalize;
+  margin: 10px;
+  padding: 10px;
+  margin-left: 30px;
+  background: lightblue;
+  border-radius: 3px;
+  width: 150px;
+  font-weight: 500;
+  box-shadow: 0 3px 7px;
+}
+
+.personal-details,
+.educational-details,
+.training-type,
+.fee-details,
+.decleration label {
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #555;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-bottom: 13px;
+}
+
+.personal-details input,
+select {
+  margin-bottom: 13px;
+  border-radius: 5px;
+  border-color: lightslategray;
+  height: 30px;
+  width: 400px;
+}
+
+select option {
+  text-transform: capitalize;
+}
+
+.educational-details input,
+select {
+  margin-bottom: 13px;
+  border-radius: 5px;
+  border-color: lightslategray;
+  height: 30px;
+  width: 400px;
+}
+.fee-details input,
+select {
+  margin-bottom: 13px;
+  border-radius: 5px;
+  border-color: lightslategray;
+  height: 30px;
+  width: 400px;
+}
+
+#capt,
+#textinput {
+  margin-bottom: 13px;
+  border-radius: 5px;
+  border-color: lightslategray;
+  height: 30px;
+  background: rgb(232, 239, 247);
+}
+
+.captimg {
+  height: 34px;
+  width: 30px;
+  padding-top: 10px;
+  margin-bottom: -5px;
+}
+
+button {
+  background: rgb(127, 255, 133);
+  border-radius: 8px;
+  margin: 10px;
+  padding: 7px;
+  color: #555;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin-top: -2px;
+}
+
+.wrapper {
+  width: 380px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top: 10%;
+  left: 52.5%;
+}
+.toast {
+  width: 100%;
+  height: 80px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1.3fr 6fr 0.5fr;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+.success {
+  border-left: 8px solid #47d764;
+}
+.error {
+  border-left: 8px solid #ff355b;
+}
+.error i {
+  color: #ff355b;
+}
+.toast:not(:last-child) {
+  margin-bottom: 50px;
+}
+.container-1,
+.container-2 {
+  align-self: center;
+}
+.container-1 i {
+  font-size: 35px;
+}
+.success i {
+  color: #47d764;
+}
+.container-2 p:first-child {
+  color: #101020;
+  font-weight: 600;
+  font-size: 16px;
+}
+.container-2 p:last-child {
+  font-size: 12px;
+  font-weight: 400;
+  color: #656565;
+}
+.toast button {
+  align-self: flex-start;
+  background-color: transparent;
+  font-size: 25px;
+  color: #656565;
+  line-height: 0;
+  border: 0;
+}
+
+.hide {
+  display: none;
+}
+
+@media (max-width: 710px) {
+  .heading img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1px;
+    margin-top: -20px;
+  }
+
+  .head {
+    margin-top: -35px;
+    margin-right: -30px;
+  }
+  .details p {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 675px) {
+  .personal-details,
+  .educational-details,
+  .training-type,
+  .fee-details,
+  .decleration label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 10px;
+    margin-bottom: 13px;
+  }
+
+  .personal-details input,
+  select {
+    width: 300px;
+  }
+
+  .educational-details input {
+    width: 300px;
+  }
+
+  .fee-details input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .head {
+    font-size: 22px;
+  }
+  .heading img {
+    height: 120px;
+    width: 250px;
+  }
+  .details p {
+    padding: 7px;
+    margin-left: 20px;
+    width: 150px;
+    font-weight: 400;
+  }
+
+  .decleration {
+    margin-left: 20px;
+  }
+
+  #capt,
+  #textinput {
+    height: 30px;
+    width: 120px;
+    background: rgb(232, 239, 247);
+  }
+
+  .captimg {
+    height: 34px;
+    width: 30px;
+    padding-top: 10px;
+    margin-bottom: -5px;
+  }
+
+  center button {
+    margin: 8px;
+    padding: 5px;
+    font-size: 17px;
+    margin-top: -2px;
+    margin-left: -20px;
+    margin-bottom: 30px;
+  }
+
+  .personal-details,
+  .educational-details,
+  .training-type,
+  .fee-details,
+  .decleration label {
+    font-size: 15px;
+    margin-right: 8px;
+  }
+
+  .personal-details input,
+  select {
+    width: 230px;
+  }
+
+  .educational-details input {
+    width: 230px;
+  }
+
+  .fee-details input {
+    width: 230px;
+  }
+
+  .wrapper {
+    width: 250px;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 52.5%;
+  }
+  .toast {
+    height: 70px;
+  }
+  .toast:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .container-1 i {
+    font-size: 35px;
+  }
+  .container-2 p:first-child {
+    font-size: 16px;
+    margin-left: 6px;
+  }
+  .container-2 p:last-child {
+    font-size: 11px;
+  }
+  .toast button {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 420px) {
+  .personal-details input,
+  select {
+    width: 220px;
+  }
+
+  .educational-details input {
+    width: 220px;
+  }
+
+  .fee-details input {
+    width: 220px;
+  }
+
+  #capt,
+  #textinput {
+    height: 30px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 395px) {
+  .details p {
+    padding: 5px;
+    margin-left: 15px;
+    width: 130px;
+    font-weight: 400;
+  }
+
+  .decleration {
+    margin-left: -35px;
+  }
+  .personal-details input,
+  select {
+    width: 200px;
+  }
+
+  .educational-details input {
+    width: 200px;
+  }
+
+  .fee-details input {
+    width: 200px;
+  }
+
+  #capt,
+  #textinput {
+    height: 25px;
+    width: 100px;
+  }
+
+  center button {
+    margin-left: -20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 370px) {
+  .personal-details,
+  .educational-details,
+  .training-type,
+  .fee-details,
+  .decleration label {
+    font-size: 12px;
+    margin-right: 8px;
+  }
+  #a {
+    margin-right: 2px;
+  }
+  #b {
+    margin-right: 4px;
+  }
+  #c {
+    margin-right: -4px;
+  }
+  #d {
+    margin-right: 5px;
+  }
+  #g {
+    margin-right: -3px;
+  }
+  #h {
+    margin-right: -4px;
+  }
+}

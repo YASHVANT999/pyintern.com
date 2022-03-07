@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <title>Registration form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="heading">
+      <img src="img/Picture1.png" />
+      <center><h3 class="head">register here</h3></center>
+    </div>
+    <form
+      action="https://sheetdb.io/api/v1/a3sncy8law13g"
+      method="POST"
+      id="sheetdb-form"
+    >
+      <div class="details">
+        <p>personal details</p>
+      </div>
+      <div class="personal-details">
+        <center>
+          <label>first name </label>
+          <input
+            type="text"
+            name="data[FIRST_NAME]"
+            placeholder="Enter First name"
+            required
+          /><br />
+          <label style="margin-left: 2px">last name </label>
+          <input
+            type="text"
+            name="data[LAST_NAME]"
+            placeholder="Enter Last name"
+            required
+          /><br />
+          <label style="margin-left: -18px" id="a">Date of birth </label>
+          <input type="date" name="data[DOB]" required /><br />
+          <label style="margin-left: -27px" id="b">father's name</label>
+          <input
+            type="text"
+            name="data[FATHERS_NAME]"
+            placeholder="Enter Father's name"
+            required
+          /><br />
+          <label style="margin-left: -1px">nationality</label>
+          <select name="data[NATIONALITY]">
+            <option>Indian</option>
+            <option>NRI</option>
+            <option>foreigner</option></select
+          ><br />
+          <label style="margin-left: 28px" id="c">gender</label>
+          <select name="data[GENDER]">
+            <option>Male</option>
+            <option>Female</option></select
+          ><br />
+          <label style="margin-left: 2px">mobile no.</label>
+          <input
+            type="number"
+            name="data[MOBILE]"
+            placeholder="Enter Mobile Number"
+            required
+          /><br />
+          <label style="margin-left: -31px" id="d">e-mail address</label>
+          <input
+            type="email"
+            name="data[E-MAIL]"
+            placeholder="Enter E-mail"
+            required
+          /><br /><br /><br />
+          <label style="margin-left: -26px">alternate mob</label>
+          <input
+            type="number"
+            name="data[ALTERNATE_MOBILE]"
+            placeholder="Enter Alternate Mob"
+          /><br />
+          <label style="margin-left: -35px">alternate E-mail</label>
+          <input
+            type="email"
+            name="data[ALTERNATE_E-MAIL]"
+            placeholder="Enter Alternate E-mail"
+          />
+        </center>
+      </div>
+      <div class="details">
+        <p>educational details</p>
+      </div>
+      <br />
+      <div class="educational-details">
+        <center>
+          <label style="margin-left: -25px">working status</label>
+          <select name="data[STATUS]">
+            <option>Student</option>
+            <option>Employed</option>
+            <option>Unemployed</option></select
+          ><br />
+          <label style="margin-left: 38px">course</label>
+          <select name="data[COURSE]">
+            <option>B.TECH</option>
+            <option>Others</option></select
+          ><br />
+          <label style="margin-left: 40px">branch</label>
+          <select name="data[BRANCH]">
+            <option>Information Technology(IT)</option>
+            <option>Mechanical Engineering(ME)</option>
+            <option>Civil Engineering(CE)</option></select
+          ><br />
+          <label style="margin-left: -14px">college name</label>
+          <input
+            type="text"
+            name="data[COLLEGE_NAME]"
+            placeholder="Enter College Name"
+            required
+          /><br />
+          <label>college city</label>
+          <input
+            type="text"
+            name="data[COLLEGE_CITY]"
+            placeholder="Enter College City"
+            required
+          /><br />
+          <label style="margin-left: -8px">college state</label>
+          <select name="data[COLLEGE_STATE]">
+            <option>Uttar Pradesh</option>
+            <option>Others</option>
+          </select>
+        </center>
+      </div>
+      <div class="details">
+        <p>training details</p>
+      </div>
+      <br />
+      <center>
+        <div class="training-type">
+          <label style="margin-left: -9px">training type</label>
+          <select name="data[TYPE]">
+            <option>Summer Training</option></select
+          ><br />
+          <label style="margin-left: -13px">training mode</label>
+          <select name="data[MODE]">
+            <option>Online</option></select
+          ><br />
+          <label style="margin-left: -10px">course joined</label>
+          <select name="data[COURSE_JOINED]">
+            <option>C programming</option>
+            <option>Python programming</option>
+            <option>Machine Learning</option></select
+          ><br />
+          <label style="margin-left: 17px" id="g">batch date</label>
+          <select name="data[BATCH_DATE]">
+            <option>Tuesday, Feb 24, 2022</option>
+            <option>Monday, Mar 01, 2022</option></select
+          ><br />
+          <label style="margin-left: 31px" id="h">duration</label>
+          <select name="data[DURATION]">
+            <option>6 Weeks</option>
+          </select>
+        </div>
+      </center>
+      <div class="details">
+        <p>fee details</p>
+      </div>
+      <center>
+        <div class="fee-details">
+          <br />
+          <label style="margin-left: 12px">course fee</label>
+          <input type="number" value="1350" readonly /><br />
+        </div>
+      </center>
+      <div class="details">
+        <p>student decleration</p>
+      </div>
+      <center style="margin-left: 80px">
+        <div class="decleration">
+          <br />
+          <input type="checkbox" checked="checked" required />
+          <label
+            >I here by declare that all the above information <br />are true to
+            the best of my knowledge.</label
+          ><br />
+        </div>
+        <input type="text" id="capt" readonly />
+        <input
+          type="text"
+          placeholder="Enter captcha"
+          id="textinput"
+          required
+        />
+        <img class="captimg" src="img/capimg1.png" onclick="cap()" /><br />
+        <button type="submit" onclick="validcap()">
+          Complete Registration
+        </button>
+      </center>
+    </form>
+    <div class="wrapper">
+      <div class="toast success hide">
+        <div class="container-1">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="container-2">
+          <p>Success</p>
+          <p>Your changes are saved successfully</p>
+        </div>
+        <button>&times;</button>
+      </div>
+      <div class="toast error hide">
+        <div class="container-1">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="container-2">
+          <p>Error</p>
+          <p>Please re-enter the details and captcha again</p>
+        </div>
+        <button>&times;</button>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

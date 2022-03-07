@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: CaveatBrush-Regular
+font link: https://fonts.google.com/specimen/Caveat+Brush
+font author: Impallari Type
+font author site: www.impallari.com
+Slogan Font: Renner-Thin.otf
+
+icon designer: Felix Koutchinski
+icon designer link: /koutchinski
+        
+{"bg":"#29C785","icon":"#245760","font":"#FFFFFF","slogan":"#ffffff"}
+      

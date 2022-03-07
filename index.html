@@ -1,21 +1,28 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-eqviv="X-UA-Compatable" content="IE=edge">
-        <http name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>pyithern.com</title>
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar">
-    <ul class="link-group">
-        <li class="link active"><a href="#home">home</a></li>
-        <li class="link"><a href="#courses">courses</a></li>
-        <li class="link"><a href="#skills">skills</a></li>
-        <div class="dropdown"><li class="link"><a>notes</a></li><div class="dropdown-content">
+    <div class="logo">РYIͥNᴛⷮEͤRͬN</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul class="menu-bar">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <div class="dropdown"><li class="link"><a>Notes</a></li><div class="dropdown-content">
             <a href="#">Link 1</a>
             <a href="#">Link 2</a>
             <a href="#">Link 3</a>
@@ -23,57 +30,25 @@
             <a href="#">Link 5</a>
           </div>
         </div>
-        <li class="link"><a href="#contacts">contacts</a></li></div>
-    </ul>
-<!--singup button-->
-    <button class="sign" onclick="login_page()">signup/login</button>
-</nav>
-<!-- login/signupform -->
-<div class="login hide" id="login">
-    <button class="close-modal">&times;</button>
-    <div class="form-modal">
-        <div class="form-toggle">
-          <button id="login-toggle" onclick="toggleLogin()">log in</button>
-          <button id="signup-toggle" onclick="toggleSignup()">sign up</button>
-        </div>
-  
-        <div id="login-form">
-          <form>
-            <input type="email" name="email" placeholder="Enter email" required/>
-            <input type="password" placeholder="Enter password" required />
-            <input type="text" style="width: 42%;" id="capt" readonly>
-            <input type="text" style="width: 42%;" placeholder="Enter captcha" id="textinput" required>
-            <img src="img/capimg1.png" style="height: 2%; width: 10%;" onclick="cap()">
-            <button type="button" class="btn login" style="margin-top:2rem" onclick="validcap()">login</button>
-            <p><a href="javascript:void(0)">Forgotten account</a></p>
-            <hr />
-          </form>
-        </div>
-  
-        <div id="signup-form">
-          <form>
-            <input type="text" name="name" placeholder="Choose username" required/>
-            <input type="email" name="name" placeholder="Enter your email" required/>
-            <input type="password" placeholder="Create password" required/>
-            <input type="text" style="width: 42%;" id="signup_capt" readonly>
-            <input type="text" style="width: 42%;" placeholder="Enter captcha" required>
-            <img src="img/capimg1.png" style="height: 2%; width: 10%;" onclick="cap()">
-            <button type="button" class="btn signup">create account</button>
-            <p>
-              Clicking <strong>create account</strong> means that you are agree to
-              our <a href="javascript:void(0)">terms of services</a>.
-            </p>
-            <hr />
-          </form>
-        </div>
-      </div>
-</div>
+        <li><a href="#contacts">Contacts</a></li>
+        <!-- cart icon -->
+        <div class="icon-cart" onclick="open_cart()" data-aos="flip-left">
+            <div class="cart-line-1" style="background-color: #2CC3B5"></div>
+            <div class="cart-line-2" style="background-color: #2CC3B5"></div>
+            <div class="cart-line-3" style="background-color: #2CC3B5"></div>
+            <div class="cart-wheel" style="background-color: #2CC3B5"></div>
+            <div class="new-item"></div>
+          </div>
+        </ul>
+    </nav>
+
+
 <!--home page-->
-<section id=home class="home-section home_container active">
+<section class="home-section home_container active" id="home">
     <div class="home_left">
         <h2>Introducing</h2>
         <h1>Pyintern Courses</h1>
-        <h3>Mohd. Amir</h3>
+        <h3>Live</h3>
         <h4>Experinces</h4>
         <div class="home_experinces">
             <div class="one_exp">
@@ -104,14 +79,14 @@
         </div>
     </div>
     <div class="home_right">
-        <img src="img/1632026968831.jpg" alt="Mohd. Amir">
+        <img src="img/main1.jpg" alt="Mohd. Amir">
     </div>
 </section>
 <!--project page-->
 <section id="courses" class="project-section active">
     <h1 class="project-heading"> courses we offer</h1>
     <div class="project-container">
-        <div class="project-card" data-aos="slide-right">
+        <div class="project-card">
             <image src="img/course01.jpg" class="project-img" alt="">
             <div class="project-content">
                 <h1 class="project-title">course 01</h1>
@@ -119,12 +94,12 @@
                     C language<br><b>Rs.1350</b>
                 </p>
                 <div class="project-btn-grp">
-                    <button class="project-btn get"><a href="https://forms.gle/Ydab5vaErf8nJNrQ7" style="text-decoration: none; color:#fff;">enroll</a></button>
+                    <button class="project-btn get cart1" onclick="add_to_cart_1()"><p style="text-decoration: none; color:#fff;">Add to cart</p></button>
                     <button class="project-btn live">syllabus</button>
                 </div>
             </div>
         </div>
-        <div class="project-card" data-aos="slide-left">
+        <div class="project-card">
             <image src="img/course02.jpg" class="project-img" alt="">
             <div class="project-content">
                 <h1 class="project-title">course 02</h1>
@@ -132,7 +107,34 @@
                     Python language<br><b>Rs.1350</b>
                 </p>
                 <div class="project-btn-grp">
-                    <button class="project-btn get">enroll</button></button>
+                    <button class="project-btn get cart2" onclick="add_to_cart_2()">Add to cart
+                    </button>
+                    <button class="project-btn live">syllabus</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <image src="img/course03.jpg" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">course 03</h1>
+                <p class="project-info">
+                    Web Development<br><b>Rs.1350</b>
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn get cart3" onclick="add_to_cart_3()"><p style="text-decoration: none; color:#fff;">Add to cart</p></button>
+                    <button class="project-btn live">syllabus</button>
+                </div>
+            </div>
+        </div>
+        <div class="project-card">
+            <image src="img/course04.jpg" class="project-img" alt="">
+            <div class="project-content">
+                <h1 class="project-title">course 04</h1>
+                <p class="project-info">
+                    Javascript Programming<br><b>Rs.1350</b>
+                </p>
+                <div class="project-btn-grp">
+                    <button class="project-btn get cart4" onclick="add_to_cart_4()"><p style="text-decoration: none; color:#fff;">Add to cart</p></button>
                     <button class="project-btn live">syllabus</button>
                 </div>
             </div>
@@ -178,11 +180,13 @@
 </div>
 <!--contact sec-->
 <p class="heading1" id="contacts">contact us</p>
-<section class="contact-section" data-aos="flip-right">
-    <form class="contact-form">
-        <center><input type="text" name="name" id="name" autocomplete="off" placeholder="name" size="39" style="border-radius: 3px;opacity: 0.9;" class="name"><br>
-        <div><input type="text" name="email" id="email" autocomplete="off" placeholder="email" size="39" style="border-radius: 3px;opacity: 0.9;border: solid lightcoral;height: 30px; margin-top: 8px;"></div><br>
-        <textarea name="msg" id="msg" placeholder="  type your message here" autocomplete="off" style="opacity: 0.9;"></textarea>
+<section class="contact-section" data-aos="none">
+    <form class="contact-form" action="https://sheetdb.io/api/v1/l7mxdjetkh4dj"
+    method="POST"
+    id="sheetdb-form">
+        <center><input type="text" name="FULL_NAME" id="name" autocomplete="off" placeholder="name" style="border-radius: 3px;opacity: 0.9;" class="name" required><br>
+        <div><input type="text" name="E-MAIL_ID" id="email" autocomplete="off" placeholder="email" style="border-radius: 3px;opacity: 0.9;border: solid lightcoral;height: 30px; margin-top: 8px;" required></div><br>
+        <textarea name="MESSAGE" id="msg" placeholder="  type your message here(max 75 words)" autocomplete="off" style="opacity: 0.9;" maxlength="75" required></textarea>
         <button type="submit" class="form-submit-btn">contact</button></center>
     </form>
     <h3 class="about-section">About Us</h3><br>
@@ -190,7 +194,103 @@
     
 </section>
 
-
+<!-- cart section -->
+<div class="cart-section">
+    <button class="close-modal" id="cart-close">&times;</button>
+    <div class="Header">
+        <h3 class="hheading">Shopping Cart</h3>
+        <h5 class="Action" onclick="removeall()" style="display: none;">Remove all</h5>
+        </div>
+        <div class="Cart-Items" id="item1" style="display: none;">
+            <div class="image-box">
+            <img class="cart-img"
+            src="img/course01.jpg" />
+            </div>
+            <div class="about">
+            <h1 class="title">C language</h1>
+            <h3 class="subtitle">by Mohd amir</h3>
+            </div>
+            <div class="trend">trending</div>
+            <div class="prices">
+                <div class="amount">Rs.1350</div>
+                <div class="save"><u>Save for later</u></div>
+                <div class="remove" onclick="remove_1()"><u>Remove</u></div>
+            </div>
+            </div>
+            <div class="Cart-Items" id="item2" style="display: none;">
+                <div class="image-box">
+                <img src="img/course02.jpg" style="height: 120px;width: 192;" />
+                </div>
+                <div class="about">
+                <h1 class="title" style="padding-left: 30px;">Python language</h1>
+                <h3 class="subtitle" style="padding-left: 30px;">by Mohd amir</h3>
+                </div>
+                <div class="trend">trending</div>
+                <div class="prices">
+                    <div class="amount">Rs.1350</div>
+                    <div class="save"><u>Save for later</u></div>
+                    <div class="remove" onclick="remove_2()"><u>Remove</u></div>
+                </div>
+                </div>
+                <div class="Cart-Items" id="item3" style="display: none;">
+                    <div class="image-box">
+                    <img src="img/course03.jpg" style="height: 120px;" />
+                    </div>
+                    <div class="about">
+                    <h1 class="title">Web Development</h1>
+                    <h3 class="subtitle">by Mohd amir</h3>
+                    </div>
+                    <div class="trend">trending</div>
+                    <div class="prices">
+                        <div class="amount">Rs.1350</div>
+                        <div class="save"><u>Save for later</u></div>
+                        <div class="remove" onclick="remove_3()"><u>Remove</u></div>
+                    </div>
+                    </div>
+                    <div class="Cart-Items" id="item4" style="display: none;">
+                        <div class="image-box">
+                        <img src="img/course04.jpg" style="height: 120px;" />
+                        </div>
+                        <div class="about">
+                        <h1 class="title">Javascript</h1>
+                        <h3 class="subtitle">by Mohd amir</h3>
+                        </div>
+                        <div class="trend">trending</div>
+                        <div class="prices">
+                            <div class="amount">Rs.1350</div>
+                            <div class="save"><u>Save for later</u></div>
+                            <div class="remove" onclick="remove_4()"><u>Remove</u></div>
+                        </div>
+                        </div>
+                <div class="whole-checkout" style="display: none;">
+                <hr> 
+                <div class="checkout">
+                <div class="total">
+                <div>
+                <div class="Subtotal">Sub-Total</div>
+                <div class="items">1 items</div>
+                </div>
+                <div class="total-amount">Rs.1350</div>
+                </div>
+                <a href="REGISTRATION FORM/index.html" target="_blank"><button class="button">Register</button></a>
+               </div></div>
+<div class="empty-cart">
+    <center><img src="img/empty-cart.png" class="empty-img"></center>
+    <div class="empty-message">ohh! cart is empty</div>
+</div>
+</div>
+<!-- contact toast  -->
+<div class="wrapper">
+    <div class="toast success hidden">
+      <div class="container-1">
+        <img src="img/check.png">
+      </div>
+      <div class="container-2">
+        <p>Success</p>
+        <p>We will contact you soon</p>
+      </div>
+      <button>&times;</button>
+    </div></div>
 
 <script src="app.js"></script>
 <!--aos script-->
